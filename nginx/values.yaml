@@ -1,6 +1,6 @@
 deployment: 
-  imageVersion: latest
-  replicas: 2
+  imageVersion: stable-perl
+  replicas: 3
   
 service:
   type: LoadBalancer
