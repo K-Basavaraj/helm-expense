@@ -1,0 +1,11 @@
+deployment: 
+  imageVersion: v1
+  replicas: 3
+  
+service:
+  type: LoadBalancer
+
+hpa:
+  minreplicas: 1
+  maxreplicas: 10
+  cpuUtilization: 20
