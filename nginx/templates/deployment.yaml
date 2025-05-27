@@ -1,0 +1,22 @@
+apiVersion: apps/v1     
+kind: Deployment       
+metadata:
+  name: nginx            
+  labels:                
+    app: nginx
+    tier: frontend
+spec:
+  replicas: {{ .Values.deployment.replicas }}            #Create 3 identical Pods.
+  selector:              #these are used to select the pod to create replicas (This tells ReplicaSet:"Look for pods that have these labels."If a pod matches, it's part of the ReplicaSet.)
+    matchLabels:
+      app: nginx
+      tier: frontend                      
+  template:              #this is pod template(or)pod defination (Pod Template — What kind of pod should be created)
+    metadata:
+      labels:            #this lables belong to pod (Any new pods created by this ReplicaSet will have these labels.)
+        app: nginx
+        tier: frontend
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:{{ .Values.deployment.imageVersion }} #this is called place holder
