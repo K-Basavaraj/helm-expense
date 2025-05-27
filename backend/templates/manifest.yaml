@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: basavaraj0509/backend:{{ .Values.deployement.imageVersion }}
+        image: basavaraj0509/backend:{{ .Values.deployment.imageVersion }}
         resources:
           requests: 
            cpu: 100m
