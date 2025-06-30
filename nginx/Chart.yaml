@@ -1,4 +1,4 @@
 apiVersion: v1  #The chart API version (required)
 name: nginx      #The name of the chart (required)
-version: 0.0.1   #A SemVer 2 version (required)
+version: 0.0.2   #A SemVer 2 version (required)
 description: this chart is used to manage nginx application

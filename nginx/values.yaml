@@ -1,5 +1,5 @@
 deployment: 
-  imageVersion: alpine
+  imageVersion: stable-perl
   replicas: 3
   
 service:
